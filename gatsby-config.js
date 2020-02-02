@@ -1,8 +1,32 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Karaoke Queen`,
+    description: `THis site chronicles Aisha's favorite karaoke spots and go-to jams.`,
+    author: `Aisha Blake`,
+    social: [
+      {
+        name: `Twitter`,
+        url: `https://twitter.com/AishaBlake`,
+      },
+      {
+        name: `GitHub`,
+        url: `https://github.com/AishaBlake`,
+      },
+    ],
+    menuLinks: [
+      {
+        name: 'Blog',
+        link: '/blog'
+      },
+      {
+        name: 'Speaking',
+        link: '/speaking'
+      },
+      {
+        name: 'Jewelry',
+        link: '/jewelry'
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -27,6 +51,13 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-theme-blog`,
+      options: {
+        basePath: `/blog`
+      }
+    },
+    `gatsby-plugin-emotion`
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
